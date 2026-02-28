@@ -1,6 +1,9 @@
 from flask import Flask, request, render_template, jsonify
-from verses import bible_verses
 from database import db, email_exists, add_email, get_emails
+from verse_scheduler import send_emails
+from apscheduler.schedulers.background import BackgroundScheduler
+import time
+
 
 app = Flask(__name__)
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
@@ -37,7 +40,20 @@ def subscribe():
         }
         return jsonify(response)
 
+
+def run_scheduler():
+    with app.app_context():
+        send_emails()
+
+
 if __name__ == '__main__':
+
     with app.app_context():
         db.create_all()
-    app.run(debug=True) 
+    #all_emails = send_emails()
+    scheduler = BackgroundScheduler()
+    scheduler.add_job(run_scheduler, 'interval', minutes=1)
+    scheduler.start()
+    print('Scheduler started. Press Ctrl + C to exit.')
+
+    app.run(debug=True, use_reloader=False) 
