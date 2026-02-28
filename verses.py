@@ -1,0 +1,17 @@
+bible_verses = [
+    "Philippians 4:13 — I can do all things through Christ who strengthens me.",
+    "Joshua 1:9 — Be strong and courageous. Do not be afraid; do not be discouraged, for the Lord your God will be with you wherever you go.",
+    "Isaiah 40:31 — Those who hope in the Lord will renew their strength. They will soar on wings like eagles.",
+    "Proverbs 3:5-6 — Trust in the Lord with all your heart and lean not on your own understanding.",
+    "Jeremiah 29:11 — For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you.",
+    "Romans 8:28 — And we know that in all things God works for the good of those who love him.",
+    "Galatians 6:9 — Let us not become weary in doing good, for at the proper time we will reap a harvest if we do not give up.",
+    "James 1:2-4 — Consider it pure joy whenever you face trials, because the testing of your faith produces perseverance.",
+    "Romans 5:3-4 — We also glory in our sufferings, because suffering produces perseverance, perseverance character, and character hope.",
+    "Philippians 4:6-7 — Do not be anxious about anything, but in every situation, by prayer and petition, present your requests to God.",
+    "Matthew 11:28 — Come to me, all you who are weary and burdened, and I will give you rest.",
+    "John 14:27 — Peace I leave with you; my peace I give you. Do not let your hearts be troubled.",
+    "Psalm 139:14 — I praise you because I am fearfully and wonderfully made.",
+    "Ephesians 2:10 — For we are God's handiwork, created in Christ Jesus to do good works.",
+    "2 Timothy 1:7 — For God has not given us a spirit of fear, but of power, love and a sound mind.",
+]

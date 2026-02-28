@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Morning Manna</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+
+    <div class="container">
+        <h2>Welcome To Morning Manna</h2>
+        <p>
+            A Python-powered daily scripture delivery system. Sign up to
+            receive daily morning verses from the bible!
+        </p>
+        <form id="signupForm">
+            <input type="text" id="user-email" placeholder="Ex: youneedjesus@amen.com">
+            <button type="button" id="submit-button"> Amen & Send</button>
+            <h3 id="subscribed"></h3>
+
+        </form>
+
+    </div>
+    
+
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
