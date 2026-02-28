@@ -49,3 +49,12 @@ Step 6: What order do I build it in?
 Randome Notes:
 request.get_json()  →  opens the envelope, gives you a Python dictionary
 jsonify()           →  takes your Python dictionary, puts it in an envelope to send back
+
+Think about everything you built in this project:
+
+HTML form for user input
+JavaScript grabbing the value and sending it via POST
+Flask receiving and processing the data
+SQLite database storing emails
+Duplicate email checking
+Responses sent back to the user

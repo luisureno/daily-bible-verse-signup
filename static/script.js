@@ -26,7 +26,7 @@ document.getElementById('submit-button').addEventListener('click', () => {
     .then(response => response.json())
     .then(data => {
         console.log(data)
-        const subscribedUser = document.getElementById("subscribed");
+        const subscribedUser = document.getElementById("subscribed-or-alreadysubscribed");
         subscribedUser.innerHTML = data.message;
     })
     .catch(error => {
