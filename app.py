@@ -55,7 +55,7 @@ if __name__ == '__main__':
         db.create_all()
     #all_emails = send_emails()
     scheduler = BackgroundScheduler()
-    scheduler.add_job(run_scheduler, 'interval', minutes=1)
+    scheduler.add_job(run_scheduler, 'cron', hour=15, minute=0)
     scheduler.start()
     print('Scheduler started. Press Ctrl + C to exit.')
 
