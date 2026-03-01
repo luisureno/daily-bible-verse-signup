@@ -7,9 +7,11 @@ import os
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from datetime import date
 
 load_dotenv()
 
+today = date.today()
 email_sender = os.getenv("EMAIL")
 app_password = os.getenv("APP_PASSWORD")
 
@@ -22,17 +24,24 @@ def send_emails():
         print(reciever)
 
         message = MIMEMultipart()
-        message["Subject"] = "Morning Manna"
+        message["Subject"] = "Morning Manna: Scripture of the Day"
         message["From"] = email_sender
         message["To"] = reciever
         host = 'smtp.gmail.com'
         port = 587
 
         text = f"""
-            Welcome to Morning Manna! 
-            {bible_verse}
-            
-        """
+Good morning!
+
+Today's date is: {today:%m/%d/%y}
+
+Here is your verse for today:
+
+{bible_verse}
+
+Have a blessed day.
+— Morning Manna
+"""
 
         part1 = MIMEText(text, "plain")
         message.attach(part1)

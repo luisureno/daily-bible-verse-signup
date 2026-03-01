@@ -2,11 +2,14 @@ from flask import Flask, request, render_template, jsonify
 from database import db, email_exists, add_email, get_emails
 from verse_scheduler import send_emails
 from apscheduler.schedulers.background import BackgroundScheduler
-import time
-
+from dotenv import load_dotenv
+import os
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///users.db'
+load_dotenv()
+
+database_api = os.getenv('DATABASE_URL')
+app.config['SQLALCHEMY_DATABASE_URI'] = database_api
 db.init_app(app)
 
 @app.route('/')

@@ -1,3 +1,5 @@
 venv/
 .env
 project_notes.txt
+instance/
+__pycache__/
