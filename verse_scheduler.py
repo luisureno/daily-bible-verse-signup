@@ -3,7 +3,6 @@ from verses import bible_verses
 import random
 from dotenv import load_dotenv
 import os 
-#from app import app
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -18,7 +17,6 @@ app_password = os.getenv("APP_PASSWORD")
 def send_emails():
     bible_verse = random.choice(bible_verses)
     
-    #with app.app_context():
     for user in get_emails():
         reciever = user.email
         print(reciever)
@@ -51,6 +49,3 @@ Have a blessed day.
             server.login(email_sender, app_password)
             server.sendmail(email_sender, reciever, message.as_string())
 
-
-
-#send_emails()

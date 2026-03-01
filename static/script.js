@@ -1,15 +1,8 @@
 
-
-
-
 function getEmailInputValue(){
     const emailInput = document.getElementById('user-email').value;
-    //console.log(emailInput)
     return emailInput;
-    //console.log(emailInput)
 }
-
-//const amenAndSend = document.getElementById('submit-button')
 
 document.getElementById('submit-button').addEventListener('click', () => {
     const email_input = document.getElementById('user-email');

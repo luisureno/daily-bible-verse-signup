@@ -53,7 +53,6 @@ if __name__ == '__main__':
 
     with app.app_context():
         db.create_all()
-    #all_emails = send_emails()
     scheduler = BackgroundScheduler()
     scheduler.add_job(run_scheduler, 'cron', hour=15, minute=0)
     scheduler.start()
